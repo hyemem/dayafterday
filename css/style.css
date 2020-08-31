@@ -1,0 +1,1178 @@
+/* <!-- 폰트 적용 -->
+    <!-- font-family: 'Lobster', cursive; font-family: 'Noto Sans KR', sans-serif; --> */
+
+html,body{
+    word-break: keep-all;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+section{ 
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.hidden{
+    width: 1px;
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    position: absolute;
+    z-index: 99999;
+}
+
+.lobster, .more_btn{
+    font-family: 'Lobster', cursive;
+    cursor: pointer;
+}
+
+/* 전체 감싸는 div */
+#total_wrap{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* 도입 세로 스크롤 영역 */
+#top_wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2638px;
+}
+
+/* 메뉴 영역 */
+#header_wrap{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff7d0;
+}
+
+header{
+    position: absolute;
+    width: 95%;
+    min-width: 1200px;
+    height: 60px;
+    left: 2.5%;
+}
+
+/* 로고 */
+#logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+}
+
+#logo a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* 메인 메뉴 */
+nav{
+    position: absolute;
+    left: 28%;
+    width: 50%;
+}
+
+#main_menu{
+    width: 100%;
+    height: 100%;
+}
+
+#main_menu li{
+    float: left;
+    width:25%;
+    line-height: 60px;
+}
+
+#main_menu li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 22px;
+    line-height: 60px;
+    color: #d0112b;
+}
+
+#main_menu li a:hover{
+    color: #ff9d00;
+}
+
+/* 메뉴 아이콘 영역 */
+#menu_icon_list{
+    position: absolute;
+    top: 20px;
+    right: 1.7%;
+    width: 133px;
+}
+
+#menu_icon_list li{
+    float: left;
+    width: 23px;
+    margin-right: 32px;
+}
+
+#menu_icon_list li:nth-child(3){
+    margin-right: 0;
+}
+
+#menu_icon_list li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* 메인 비주얼 영역 */
+main{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 1080px;
+}
+
+#main_img_wrap_01{
+    position: absolute;
+    top: 130px;
+    left: 0;
+    width: 885px;
+    height: 492px;
+    overflow:hidden;
+}
+
+/* 비주얼 이미지 01 데코 애니메이션 */
+#main_img_decobox_01{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #000;
+    animation : decoAni 1s ease-in forwards;
+}
+
+/* 데코 animation */
+@keyframes decoAni{
+    0%{left:0%; width: 100%;}
+    100%{left:100%; width:0;}
+}
+
+/* 1800px이하일 때 안 보이게 */
+@media screen and (max-width:1800px){
+    #main_img_wrap_01{display: none;}
+}
+
+
+#main_img_wrap_02{
+    position: absolute;
+    right:0;
+}
+
+#main_img_decobox_02{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    animation : decoAni 1s ease-in forwards;
+    animation-delay: .3s;
+}
+
+
+/* 메인 텍스트 박스 */
+#main_txtbox{
+    position: absolute;
+    top: 752px;
+    width: 945px;
+    height: 328px;
+    background: #feee9c;
+}
+
+#main_txtbox_inner{
+    padding:75px 137px 75px 95px;
+    box-sizing: border-box;
+}
+
+/* 메인 텍스트박스 데코선 */
+#main_deco_bar{
+    position: absolute;
+    top: 75px;
+    left: 47px;
+    width: 15px;
+    height: 178px;
+    background: #d0112b;
+}
+
+#main_txt_tit{
+    color: #d0112b;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+#main_txt{
+    color: #353535;
+    font-weight: 400;
+    font-size: 16px;
+    line-height:2;
+}
+
+/* 브랜드 소개 영역(세로 영역) */
+
+#brand_wrap{
+    position: absolute;
+    top: 1140px;
+    width: 100%;
+    height: 749px;
+}
+
+#brand_inner{
+    position: relative;
+    padding: 90px 0;
+}
+
+
+/* 브랜드 소개 사진 */
+#brand_img_wrap{
+    position: relative;
+    width: 449px;
+    height: 569px;
+    z-index: -1;
+    float: left;
+    overflow: hidden;
+}
+
+
+#brand_img{
+    width: 100%;
+    height: 100%;
+    float: left;
+    opacity: 0;
+    transform: scale(1.2);
+    transition: all .7s ease;
+}
+
+#brand_img.selected{
+    transform: scale(1);
+}
+
+/* 이미지 데코 애니메이션 효과 */
+#brand_img_decobox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: #000;
+    z-index: 5;
+}
+
+
+/* 브랜드 소개 영역(세로 영역) 텍스트 */
+#brand_txtbox{
+    position: absolute;
+    width: 100%;
+    height: 469px;
+    float: left;
+    top: 180px;
+    left: 581px;
+}
+
+/* 브랜드 소개 영역(세로 영역) 제목 */
+#brand_tit_wrap{
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 370px;
+    height: 150px;
+    opacity: 0;
+}
+
+/* 배경바 있는 제목 */
+#brand_tit_01{
+    position: relative;
+    font-size: 70px;
+    color: #fff;
+}
+
+/* 배경바 */
+#brand_tit_01::before{
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 310px;
+    height: 75px;
+    background: #d0112b;
+    z-index: -1;
+}
+
+/* 배경바 없는 제목 */
+#brand_tit_02{
+    font-size: 70px;
+    color: #d0112b;
+    padding-left: 50px;
+}
+
+/* 브랜드 소개 영역(세로) 설명 */
+#brand_txt{
+    position: absolute;
+    top: 190px;
+    left: 200px;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 2;
+    color: #353535;
+    opacity: 0;
+}
+
+
+/* 더보기 버튼 공통 디자인 */
+.more_btn{
+    color: #d0112b;
+    font-size: 23px;
+}
+
+/*브랜드 소개(세로) 더보기 버튼 */
+#brand_txtbox .more_btn{
+    position: absolute;
+    left: 700px;
+    bottom: 15px;
+    opacity: 0;
+}
+
+
+/* 제품 소개 영역(세로 영역)  */
+#product_wrap{
+    position: absolute;
+    width: 100%;
+    height: 749px;
+    top: 1889px;
+}
+
+#product_inner{
+    padding-top: 120px;
+    padding-bottom: 190px;
+}
+
+/* 제목 소개 제목 그룹 */
+#product_titbox{
+    height: 88px;
+    margin-bottom: 74px;
+}
+
+/* 제품 소개 소제목 */
+#product_titbox span{
+    position: relative;
+    top: 100px;
+    display: block;
+    text-align:center;
+    font-size: 20px;
+    margin-bottom: 10px;
+    opacity:0;
+}
+
+/* 제품 소개 대제목 */
+#product_titbox h2{
+    position: relative;
+    top: 100px;
+    text-align: center;
+    font-size: 40px;
+    opacity:0;
+}
+
+/* 제목 목록 */
+#product_list{
+    width: 100%;
+    height: 266px;
+}
+
+#product_list li{
+    position: relative;
+    top: 100px;
+    left: 0;
+    width: 204px;
+    margin-right: 45px;
+    float: left;
+    opacity: 0;
+}
+
+#product_list li:nth-child(5){
+    margin-right: 0;
+}
+
+/* 제품 설명(세로 영역) 이미지 */
+#product_list li a img{
+    background: #fae164;
+    border-radius: 50%;
+    width: 190px;
+    height: auto;
+    transition: all .2s ease;
+    border:7px solid #d0112b;
+    margin-bottom: 15px;
+}
+
+/* 마우스 오버 효과 */
+#product_list li a img:hover{
+    background: #fae164;
+    box-shadow: inset -3px 3px 20px rgba(255, 94, 0, 0.616);
+}
+
+
+/* 제품명 서브설명 */
+.product_list_sub{
+    display: block;
+    font-size: 17px;
+    font-weight: 400;
+    color: #353535;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* 제품명 */
+.product_list_tit{
+    font-size: 19px;
+    font-weight: 600;
+    color: #d0112b;
+    text-align: center;
+}
+
+
+/* 가로 스크롤 영역 시작 */
+#horizontal_wrap{
+    position: fixed;
+    top: 2638px;
+    left: 0;
+    width: 8,082px;
+    height: 966px;
+    background: #f9f9f9;
+}
+
+#horizontal_wrap section{
+    position: relative;
+    width: 100%;
+    z-index: -5;
+}
+
+#horizontal_wrap section>div{
+    float: left;
+    height: 100%;
+}
+
+/* 가로 스크롤 브랜드 소개 01 영역 */
+#horizontal_wrap #brand_promotion01{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1999px;
+    height: 100%;
+    z-index: -3;
+}
+
+/* 브랜드 소개 01 텍스트박스 */
+#brand_promotion01_txtbox{
+    position: absolute;
+    top: 39%;
+    left: 305px;
+    width: 712px;
+    height: 410px;
+    padding: 60px 130px 40px 56px;
+    box-sizing: border-box;
+    background: #fff;
+    z-index: -2;
+}
+
+/* 브랜드 소개 01 제목 */
+#brand_promotion01_txtbox .lobster{
+    position: relative;
+    font-size: 50px;
+    color: #d0112b;
+    margin-bottom: 30px;
+}
+
+/* 브랜드 소개 01 제목 border */
+#brand_promotion01_txtbox .lobster::before{
+    content: 'We save the life';
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    color: #fff;
+    text-shadow: -1px 0 #d0112b, 1px 0 #d0112b, 0 -1px #d0112b, 0 1px #d0112b;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    z-index: -1;
+}
+
+/* 브랜드 소개 01 설명 텍스트 */
+.horizontal_txt{
+    font-size: 16px;
+    color: #353535;
+    line-height: 1.7;
+}
+
+#brand_promotion01_txtbox .horizontal_txt{
+    margin-left: 15px;
+}
+
+/* 브랜드 소개 01 버튼 */
+#brand_promotion01_txtbox .more_btn{
+    position: absolute;
+    right: 80px;
+    bottom: 30px;
+}
+
+/* 브랜드 소개 01 사진1 */
+#horizontal_img_wrap_01{
+    position: absolute;
+    top: 40%;
+    left: 1148px;
+    overflow: hidden;
+}
+
+#horizontal_img_01{
+    transform: scale(1.2);
+    opacity: 0.7;
+    transition: all .6s ease;
+}
+
+#horizontal_img_01.selected{
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+/* 브랜드 소개 01 사진2 */
+#horizontal_img_wrap_02{
+    position: absolute;
+    top: 23%;
+    left: 1624px;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#horizontal_img_02{
+    opacity: 0.7;
+    transform: scale(1.2);
+    transition: all 1s ease;
+}
+
+#horizontal_img_02.selected{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* 가로 스크롤 브랜드 소개 02 영역 */
+#horizontal_wrap #brand_promotion02{
+    position: absolute;
+    top: 0;
+    left: 1999px;
+    width: 1771px;
+    height: 100%;
+}
+
+/* 브랜드 소개 02 사진 */
+#horizontal_img_wrap_03{
+    position: absolute;
+    top: 24%;
+    left: 288px;
+    overflow: hidden;
+}
+
+#horizontal_img_03{
+    opacity: 0.7;
+    transform: scale(1.2);
+    transition: all .7s ease;
+}
+
+#horizontal_img_03.selected{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 브랜드 소개 02 텍스트박스 */
+#brand_promotion02_txtbox{
+    position: absolute;
+    top: 23%;
+    left: 811px;
+    width: 590px;
+    height: 208px;
+    background: #fff;
+    padding: 60px 115px 60px 57px;
+    box-sizing: border-box;
+}
+
+/* 브랜드 소개 02 더보기 버튼 */
+#brand_promotion02_txtbox .more_btn{
+    position: absolute;
+    bottom: 40px;
+    right:50px;
+    color:#353535;
+}
+
+/* 브랜드 소개 02 데코 도장 */
+#deco_01 img{
+    position: absolute;
+    top:40%;
+    left:1380px;
+}
+
+
+/* 가로 스크롤 제품 소개 01 영역 */
+#horizontal_wrap #product_promotion01{
+    position: absolute;
+    top: 0;
+    left: 3770px;
+    width: 1696px;
+    height: 100%;
+    z-index: -1;
+}
+
+/* 제품 소개 01 사진1 */
+#horizontal_img_wrap_04{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+
+#horizontal_img_04{
+    opacity: 0.7;
+    transform: scale(1.2);
+    transition: all .7s ease;
+}
+
+#horizontal_img_04.selected{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 제품 소개 01 사진2 */
+#horizontal_img_wrap_05{
+    position: absolute;
+    top: 39%;
+    left: 313px;
+    overflow: hidden;
+}
+
+#horizontal_img_05{
+    opacity: 0.7;
+    transform: scale(1.2);
+    transition: all .7s ease;
+}
+
+#horizontal_img_05.selected{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 제품 소개 01 제목 텍스트 */
+#product_promotion01_titbox{
+    position: absolute;
+    top: 20%;
+    left: 420px;
+}
+
+/* 제품 소개 01 소제목 */
+#product_promotion01_titbox span{
+    font-size: 22px;
+    color: #d0112b;
+}
+
+/* 제품 소개 01 대제목 */
+#product_promotion01_titbox p{
+    position: relative;
+    top: 5px;
+    font-size: 40px;
+    color: #fff;
+}
+
+/* 제품 소개 01 대제목 배경바 */
+#product_promotion01_titbox p::before{
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 43px;
+    background: #d0112b;
+    z-index: -1;
+}
+
+/* 제품 소개 01 텍스트박스*/
+#product_promotion01_txtbox{
+    position: absolute;
+    top: 33%;
+    left: 345px;
+    width: 1010px;
+    height: 317px;
+    background: #fff;
+    padding: 55px 55px 55px 290px;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+
+/* 제품 소개 01 설명 텍스트 굵은 글씨 */
+#product_promotion01_txtbox .horizontal_txt span{
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#product_promotion01_txtbox .horizontal_txt{
+    line-height: 1.9;
+}
+
+
+/* 가로 스크롤 제품 소개 02 영역 */
+#horizontal_wrap #product_promotion02{
+    position: absolute;
+    top: 0;
+    left: 5466px;
+    width: 2618px;
+    height: 100%;
+    overflow: hidden;
+}
+
+
+/* 제품 소개 02 데코 글씨 */
+#deco_letter_01{
+    position: absolute;
+    top: 0;
+    width: 180px;
+    height: 5400px;
+    background: url(../img/deco_02.png) no-repeat;
+    background-size: cover;
+    opacity: 0.3;
+    transition: opacity .5s ease;
+}
+
+#deco_letter_02{
+    position: absolute;
+    top: 0;
+    left: 220px;
+    width: 180px;
+    height: 5400px;
+    background: url(../img/deco_02.png) no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    transition: opacity .5s ease;
+}
+
+#deco_letter_01:hover, #deco_letter_02:hover{
+    opacity: 1;
+}
+
+
+/* 제품 소개 02 사진1 */
+#horizontal_img_wrap_06{
+    position: absolute;
+    top: 50%;
+    left: 642px;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+
+#horizontal_img_06{
+    opacity: 0.7;
+    transform: scale(1.2);
+    transition: all .7s ease;;
+}
+
+#horizontal_img_06.selected{
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* 제품 소개 02 사진2 */
+#horizontal_img_wrap_07{
+    position: absolute;
+    top: 290px;
+    left: 866px;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#horizontal_img_07{
+    opacity: 0.7;
+    transform: scale(1.2);
+    transition: all 1s ease;
+}
+
+#horizontal_img_07.selected{
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+
+#price_info{
+    position: absolute;
+    top: 630px;
+    left: 1190px;
+    font-size: 13px;
+}
+
+
+/* 제품 소개 02 텍스트박스 (원형) */
+#package_txtbox{
+    position: absolute;
+    top:50%;
+    left:1600px;
+    width:583px;
+    height:583px;
+    background:#fff;
+    border-radius: 50%;
+    border: 13px solid #d0112b;
+    padding: 100px 40px 63px 40px;
+    box-sizing:border-box;
+    transform: translateY(-50%);
+}
+
+
+/* 제품 소개 02 대제목*/
+#package_txtbox .lobster{
+    font-size:50px;
+    color: #d0112b;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 제품 소개 02 텍스트 내용*/
+#package_txtbox .horizontal_txt{
+    text-align: center;
+    line-height:2.5;
+    margin-bottom: 40px;
+}
+
+#package_txtbox .horizontal_txt span{
+    font-weight: 600;
+}
+
+/* 제품 소개 02 텍스트 주의사항*/
+#packgage_subtxt{
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+/* 후반 세로 스크롤 영역 */
+#bottom_wrap{
+    position: fixed;
+    top: 3608px;
+    left: 0;
+    width: 100%;
+    height: 2060px;
+}
+
+/* 비디오 영역 */
+#video_wrap{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:1020px;
+    background: url(../img/video_bg.jpg) no-repeat;
+    z-index: 1;
+}
+
+
+/* 비디오 영상 */
+#video_wrap video{
+    position: absolute;
+    top: 320px;
+    left: 0px;
+    right: 0;
+    margin : 0 auto;
+}
+
+/* 제목 텍스트 묶음*/
+#video_titbox{
+    position: absolute;
+    top: 40px;
+    left: 18%;
+    width: 484px;
+    height: 296px;
+    transform: rotate(-15deg);
+}
+
+/* 서브 제목 */
+#video_sub{
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    z-index: 1;
+}
+
+/* 서브 제목 평행사변형 배경 */
+#video_sub::before{
+    content:'';
+    position: absolute;
+    left: -5%;
+    top: -5%;
+    width: 110%;
+    height: 110%;
+    background: #d0112b;
+    transform: skew(-30deg);
+    z-index: -1;
+}
+
+
+/* 대제목 */
+#video_titbox p{
+    position: relative;
+    margin-top: 20px;
+    font-size: 90px;
+    color: #d0112b;
+    z-index: 1;
+}
+
+/* 대제목 stroke*/
+#video_titbox p::before{
+    content: 'What is';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #f3f3f3;
+    text-shadow: -1px 0 #d0112b, 1px 0 #d0112b, 0 -1px #d0112b, 0 1px #d0112b;
+    z-index: -1;
+}
+
+#video_titbox p::after{
+    content: 'Your Color?';
+    position: absolute;
+    top: 95px;
+    left: 5px;
+    color: #f3f3f3;
+    text-shadow: -1px 0 #d0112b, 1px 0 #d0112b, 0 -1px #d0112b, 0 1px #d0112b;
+    z-index: -1;
+}
+
+
+/* 매장위치 영역 */
+#location_wrap{
+    position: absolute;
+    top: 1020px;
+    left: 0;
+    width:100%;
+    height: 890px;
+    background: #fff;
+    transition: all .4s ease-in-out;
+}
+
+#location_wrap.selected{
+    background: #feefb3;
+}
+
+/* 매장 사진 */
+#location_img{
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding-top: 115px;
+    box-sizing: border-box;
+}
+
+/* 매장 안내 텍스트 영역 */
+#location_text{
+    width: 50%;
+    height: 100%;
+    padding-top: 300px;
+    box-sizing: border-box;
+    text-align: right;
+    float: left;
+}
+
+#location_text::before{
+    content: '';
+    clear: both;
+}
+
+/* 매장 안내 대제목 */
+#location_tit_01{
+    padding-right: 60px;
+    box-sizing: border-box;
+    font-size: 70px;
+    color: #d0112b;
+}
+
+#location_tit_02{
+    position: relative;
+    font-size: 70px;
+    color: #fff;
+    z-index: 1;
+}
+
+/* 매장 안내 네모 배경 */
+#location_tit_02::before{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 100%;
+    top: 5px;
+    right: -20px;
+    background: #d0112b;
+    z-index: -2;
+}
+
+/* 매장 안내 설명텍스트 */
+#location_txtbox{
+    margin-top: 110px;
+    font-size: 20px;
+    color: #353535;
+    line-height: 1.5;
+}
+
+#location_info_place span{
+    font-weight: 700;
+}
+
+#location_info_time{
+    padding-top: 32px;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+
+/* 푸터 */
+footer{
+    position: absolute;
+    top: 1910px;
+    left: 0;
+    width:100%;
+    height: 250px;
+    background: #d0112b;
+    padding-top: 70px;
+    padding-left: 125px;
+    color: #fdeb89;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+footer a{
+    font-weight: 700;
+    color: #fdeb89;
+}
+
+#footer_copyright{
+    margin-top: 20px;
+}
+
+/* top버튼 */
+#top_btn{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    cursor: pointer;
+}
+
+
+#top_btn img{
+    width: 150px;
+    height: auto;
+}
+
+
+/* scroll값 표시 */
+#scrollNum{
+    position: fixed;
+    top: 100px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    line-height: 100px;
+    z-index: 5;
+}
+
+/* popup창 표시 */
+#popup_bg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 20;
+    opacity: 0;
+}
+
+#popup{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    padding: 120px 75px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 250px;
+    z-index: 100;
+}
+
+#popup_tit{
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#popup_txt{
+    padding-top: 15%;
+    box-sizing: border-box;
+    font-size: 15px;
+    text-align: center;
+    line-height:2;
+    word-break: break-all;
+}
+
+#popup_txt span{
+    position: relative;
+    font-weight: 700;
+}
+
+#popup_txt span::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    background: #fae164;
+    z-index: -1;
+}
+
+#close{
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 40px;
+    background:#000;
+    border-radius: 40px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 700;
+    margin-top: 10%;
+}
