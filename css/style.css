@@ -458,7 +458,6 @@ main{
     left: 0;
     width: 8,082px;
     height: 966px;
-    background: #f9f9f9;
 }
 
 #horizontal_wrap section{
@@ -480,6 +479,7 @@ main{
     width: 1999px;
     height: 100%;
     z-index: -3;
+    background: #f9f9f9;
 }
 
 /* 브랜드 소개 01 텍스트박스 */
@@ -582,6 +582,7 @@ main{
     left: 1999px;
     width: 1771px;
     height: 100%;
+    background: #f9f9f9;
 }
 
 /* 브랜드 소개 02 사진 */
@@ -639,6 +640,7 @@ main{
     width: 1696px;
     height: 100%;
     z-index: -1;
+    background: #f9f9f9;
 }
 
 /* 제품 소개 01 사진1 */
@@ -745,6 +747,8 @@ main{
     width: 2618px;
     height: 100%;
     overflow: hidden;
+    background: #f9f9f9;
+    z-index: -3;
 }
 
 
